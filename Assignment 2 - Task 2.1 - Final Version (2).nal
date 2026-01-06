@@ -1,0 +1,39 @@
+*setopname 1 ^go
+*setopname 2 ^pick
+*motorbabbling=false
+*volume=0
+
+
+<{cube} --> [blue]>.
+<{cube} --> [heavy]>.
+<{cube} --> [hard]>.
+
+<{sphere} --> [blue]>.
+<{sphere} --> [heavy]>.
+<{sphere} --> [soft]>.
+
+<{cylinder} --> [red]>.
+<{cylinder} --> [light]>.
+<{cylinder} --> [hard]>.
+
+<<$1 --> [blue]> <(<$1 --> [at]> --> ^pick) =/> <$1 --> [is_held]>>>.
+
+<{start} --> [at]>. :|:
+<({SELF} * {cube}) --> ^go>. :|:
+<{cube} --> [at]>. :|:
+<({SELF} * {cube}) --> ^pick>. :|:
+<{cube} --> [is_held]>. :|:
+
+<{sphere} --> [at]>. :|:
+<{sphere} --> [is_held]>! :|: 
+<{sphere} --> [is_held]>. :|:
+
+<?1 =/> <{sphere} --> [is_held]>>? :|:
+<(<{sphere}--> [at]> --> ^pick) =/> <{sphere} --> [is_held]>>? :|:
+
+<{cylinder} --> [at]>. :|:
+<{cylinder} --> [is_held]>! :|: 
+<{cylinder} --> [is_held]>. :|:
+
+<?1 =/> <{cylinder} --> [is_held]>>? :|:
+<(<{cylinder} --> [at]> --> ^pick) =/> <{cylinder} --> [is_held]>>? :|:

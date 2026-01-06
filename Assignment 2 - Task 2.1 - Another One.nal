@@ -1,0 +1,17 @@
+*motorbabbling=false
+//*volume=0
+
+<{cube} --> [blue]>.
+<{sphere} --> [blue]>.
+<{cylinder} --> [red]>.
+20
+
+<{cube} --> [heavy]>.
+<{sphere} --> [heavy]>.
+<{cylinder} --> [light]>.
+20
+
+<{cube} --> [hard]>.
+<{sphere} --> [soft]>.
+<{cylinder} --> [hard]>.
+200

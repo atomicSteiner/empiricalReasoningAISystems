@@ -1,0 +1,27 @@
+*motorbabbling=false
+
+<<($1 * $2) --> MoreMassiveThan> ==> <($1 * $2) --> Attracts>>.
+<<($1 * $2) --> Attracts> ==> <($2 * $1) --> RevolvesAround>>.
+
+<(nucleus * electron) --> MoreMassiveThan>.
+<(nucleus * electron) --> Attracts>.
+<(electron * nucleus) --> RevolvesAround>.
+
+<(sun * earth) --> MoreMassiveThan>.
+<(sun * earth) --> Attracts>.
+
+// expected: Answer: <(earth * sun) --> RevolvesAround>. creationTime=10 Stamp=[6,2,7,1] Truth: frequency=1.000000, confidence=0.836900
+<(earth * sun) --> RevolvesAround>?
+
+<earth --> planet>.
+
+// expected: Answer: <(planet * sun) --> RevolvesAround>. creationTime=13 Stamp=[8,6,2,7,1] Truth: frequency=1.000000, confidence=0.429618
+<(planet * sun) --> RevolvesAround>?
+
+<sun --> [yellow]>.
+<sun --> [hot]>.
+
+// these queries has the same answers as the original ones :c
+<(earth * sun) --> RevolvesAround>?
+
+<(planet * sun) --> RevolvesAround>?

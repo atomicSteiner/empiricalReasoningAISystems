@@ -1,0 +1,18 @@
+*motorbabbling=false
+
+<{Ari} --> person>.
+<{Quinn} --> person>.
+<{Robin} --> person>.
+
+<({Quinn} * {Ari}) --> TallerThan>.
+<({Robin} * {Quinn}) --> TallerThan>.
+
+<(<($1 * $2) --> TallerThan> && <$2 --> PlayBasketball>) ==> <$1 --> PlayBasketball>>.
+
+<{Quinn} --> PlayBasketball>.
+
+// expected: Answer: <{Ari} --> PlayBasketball>. creationTime=11 Stamp=[7,2,1] Truth: frequency=1.000000, confidence=0.402762
+<{Ari} --> PlayBasketball>?
+
+// expected: Answer: <{Robin} --> PlayBasketball>. creationTime=11 Stamp=[5,7,6] Truth: frequency=1.000000, confidence=0.729000
+<{Robin} --> PlayBasketball>?

@@ -1,0 +1,27 @@
+// NAL input derived from ERAIS Assignment 1-2
+
+<apple --> fruit>. %1.0;0.9%
+<fruit --> plant>. %1.0;0.9%
+<plant --> edible>. %1.0;0.9%
+
+// Derived judgments (Deduction)
+<apple --> plant>?
+<apple --> edible>?
+<fruit --> edible>?
+
+// Inductive derivations
+<apple --> food>. %1.0;0.9%
+<fruit --> food>?
+<plant --> food>?
+<plant --> food>?
+<edible --> food>?
+<edible --> food>?
+<edible --> food>?
+
+// Abduction + Revision derivations
+<apple --> edible>. %0.230;0.923%
+<apple --> plant>?
+<apple --> fruit>?
+<fruit --> edible>?
+<plant --> edible>?
+<fruit --> plant>?
